@@ -4,14 +4,14 @@ pipeline {
 
     tools {
        
-        maven "M3"
+        maven "m3"
     }
 
     stages {
         stage('Build') {
             steps {
                 
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                git 'https://github.com/adithnaveen/simple-maven-project-with-tests''
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
